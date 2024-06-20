@@ -1,0 +1,48 @@
+header{
+    display: flex;
+    background-color: rgb(30, 28, 28);
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding-left: 40px;
+    padding-right: 20px;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.logo{
+    width:90px;
+}
+
+
+
+.lista{
+    width: 500px;
+    font-size: 24px;
+}
+.lista ul {
+    list-style-type:none;
+    padding-left: 0px;
+}
+
+.lista ul li{
+    display: inline-block;
+    padding-right: 40px;
+    
+}
+
+.header-link:hover{
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.lista ul li:hover{
+    padding-bottom: 1px;
+    
+}

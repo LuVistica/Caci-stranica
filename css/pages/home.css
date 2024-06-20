@@ -1,0 +1,70 @@
+.home-slika{
+    position: relative;
+    display: inline-block;
+
+    width: 100%;
+    margin-top: 100px;
+    height:750px;
+}
+.home-slika img{
+    display: block;
+    width: 100%;
+    height: 750px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Poluprovidna pozadina za bolju čitljivost */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+.txt-border {
+    padding-bottom: 30px;
+    border-bottom: 2px solid white;
+}
+
+.text-overlay p {
+    margin: 20px;
+}
+
+
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(30, 28, 28); /* Dodana tamna pozadina */
+    border-radius: 10px; /* Zaobljene ivice */
+    color: white;
+    margin:50px;
+}
+
+.section .text {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.section .image {
+    flex: 1;
+    text-align: right;
+}
+
+.section .image img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.section .text h2 {
+    margin-bottom: 20px;
+}
