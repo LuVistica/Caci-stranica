@@ -41,10 +41,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1D8FA2; /* Dodana tamna pozadina */
+    /* Dodana tamna pozadina */
     border-radius: 10px; /* Zaobljene ivice */
-    color: white;
-    margin:50px;
+    color: black;
+    margin: 50px;
+    overflow: hidden; /* Obezbeđuje da unutrašnji sadržaj ne prelazi granice roditeljskog elementa */
 }
 
 .section .text {
@@ -58,16 +59,18 @@
     text-align: right;
     margin: 0; /* Uklanja margine */
     padding: 0;
+    height: 100%; /* Obezbeđuje da roditeljski element zauzme svu visinu */
 }
 
 .section .image img {
     width: 100%;
-    height: 100%;
+    height: auto; /* Sprečava da slika bude izobličena */
     object-fit: cover; /* Održava proporcije slike i pokriva ceo prostor */
-    border-radius: 10px;
+    border-radius: 20px; /* Zaobljene ivice slike koje odgovaraju roditeljskom elementu */
+    display: block; /* Uklanja dodatni prostor ispod slike */
 }
 
 .section .text h2 {
     margin-bottom: 20px;
-    color:black
+    color: black;
 }
