@@ -15,10 +15,10 @@ header{
 }
 
 .naslov{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .logo{
-    width:90px;
+    width:105px;
 }
 
 
@@ -35,16 +35,27 @@ header{
 .lista ul li{
     display: inline-block;
     padding-right: 40px;
-    
+    font-weight: bold;
 }
 
-.header-link:hover{
-    padding-bottom: 5px;
-    border-bottom: 1px solid white;
-    cursor: pointer;
+.header-link {
+    text-decoration: none;
+    color: white;
+    position: relative; /* Potrebno za pseudo-element */
+    padding-bottom: 10px; /* Prostor ispod teksta za animaciju bordera */
 }
 
-.lista ul li:hover{
-    padding-bottom: 1px;
-    
+.header-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: width 0.5s; /* Tranzicija širine za 0.5 sekundi */
+}
+
+.header-link:hover::after {
+    width: 100%;
 }
