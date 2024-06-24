@@ -1,9 +1,7 @@
 .home-slika{
     position: relative;
     display: inline-block;
-
     width: 100%;
-    margin-top: 100px;
     height:750px;
 }
 .home-slika img{
@@ -100,5 +98,4 @@
 .full-width-div p {
     max-width: 600px; /* Ograničava širinu paragrafa */
    
-    
 }
