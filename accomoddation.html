@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/shared/header.css"/>
     <link rel="stylesheet" href="css/shared/general.css">
     <link rel="stylesheet" href="css/shared/footer.css"/>
-    <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/pages/accomoddation.css">
 
 
@@ -56,10 +55,9 @@
 
         <div class="container">
             <div class="buttons">
-                <button>Property details</button>
-                <button>Amenities, price and availability</button>
-                <button>Location on map</button>
-                <button>Reviews</button>
+                <button onclick="scrollToSection('.section-property')">Property details</button>
+                <button onclick="scrollToSection('.section-check')">Amenities, price and availability</button>
+                <button onclick="scrollToSection('.about-unit')">Location on map</button>
             </div>
             <div class="image-gallery">
                 <div class="side-images">
@@ -113,7 +111,7 @@
         <div class="content">
            
             <div class="details">
-                <div class="section about-property">
+                <div class="section-property">
                     <h3>ABOUT THE PROPERTY</h3>
                     <p>Plan your romantic getaway to Istria! Visit Villa Romantica, an ideal vacation destination for two in idyllic Istria. Our
                          little house offers the perfect combination of luxury, comfort, and privacy so that you can fully enjoy your vacation together.
@@ -128,11 +126,11 @@
                     </p>
                     
                 </div>
-                <div class="section checkin-checkout">
+                <div class="section-check" style="background-color: white;">
                     <h3>CHECK IN / CHECK OUT</h3>
                     <p>from 15:00 h<br>to 10:00 h</p>
                 </div>
-                <div class="section object-amenities">
+                <div class="section2" style="background-color: white;">
                     <h3>OBJECT AMENITIES</h3>
                     <div class="amenities">
                         <div class="amenity"><img src="internet.png" alt="Internet"><span>Internet</span></div>
@@ -144,13 +142,13 @@
                         <div class="amenity"><img src="sauna.png" alt="Sauna"><span>Sauna</span></div>
                     </div>
                 </div>
-                <div class="section about-unit">
-                    <h3>ABOUT UNIT</h3>
-                    <p>Villa Romantica offers complete privacy, creating the perfect environment for couples to relax and enjoy moments of intimacy without distraction.</p>
-                    <p>This romantic house is ideal for couples who want to revive their relationship, celebrate special occasions like an anniversary, or simply spend quality time together.</p>
-                    <p>Take advantage of the opportunity for a deeper connection in the oasis of peace and love offered by Villa Romantica.</p>
+                <div class="section2">
+                    <h3 style="padding-right: 100px;">ABOUT UNIT</h3>
+                    <p>Villa Romantica offers complete privacy, creating the perfect environment for couples to relax and enjoy moments of 
+                        intimacy without distraction. This romantic house is ideal for couples who want to revive their relationship, celebrate special occasions like an 
+                    anniversary, or simply spend quality time together. Take advantage of the opportunity for a deeper connection in the oasis of peace and love offered by Villa Romantica.</p>
                 </div>
-                <div class="section unit-details">
+                <div class="section2" style="background-color: white;">
                     <h3>UNIT DETAILS</h3>
                     <div class="details-grid">
                         <div class="detail"><span>Type:</span> Vacation home</div>
@@ -216,6 +214,29 @@
                 protect: true
             });
         });
+
+
+
+        function scrollToSection(selector) {
+    const targetSection = document.querySelector(selector);
+
+    if (targetSection) {
+        // Odredi visinu prozora i visinu ciljnog elementa
+        const windowHeight = window.innerHeight;
+        const sectionHeight = targetSection.clientHeight;
+        
+        // Izračunaj željenu poziciju scrollanja kako bi ciljani element bio centriran
+        const scrollPosition = targetSection.offsetTop - (windowHeight - sectionHeight) / 2;
+
+        // Scrollaj do ciljnog elementa s glatkom animacijom
+        window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
     </script>
     
 </body>

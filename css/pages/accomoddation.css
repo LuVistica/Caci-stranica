@@ -4,11 +4,25 @@
     padding: 20px;
 }
 
+
+.buttons{
+    margin-bottom: 30px;
+}
+.buttons button {
+    margin-right: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #c7c5c5;
+}
+.buttons button:hover{
+    border: 2px solid black;
+}
+
 .content {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
 }
 
 
@@ -52,12 +66,6 @@
     transform: scale(1.1); /* Zoom in efekt na hover */
 }
 
-
-
-.details {
-    padding: 20px 0;
-}
-
 .section {
     margin-bottom: 20px;
     
@@ -93,6 +101,7 @@
     gap: 10px;
     text-align: center; /* Centrira tekst */
     width: 10%;
+    font-size: 14px;
 }
 
 .amenity img {
@@ -100,6 +109,11 @@
     object-fit: cover; /* Održava omjer slike */
     border-radius: 10px; /* Zaobljuje sliku */
     transition: transform 0.3s ease; /* Tranzicija za zoom efekt */
+}
+
+.details {
+    padding: 20px 0;
+    font-size: 14px;
 }
 
 .details-grid {
@@ -117,3 +131,25 @@
 .detail span {
     font-weight: bold;
 }
+
+
+
+.section2,.section-property,.section-check{
+    display: flex;
+    background-color: #f0eded;
+    height:200px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.section2 h3, .section-property h3, .section-check h3 {
+    width: 180px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px; /* Razmak desno od naslova */
+    border-right: 3px solid #989696; /* Desni border */
+    padding-right: 20px; /* Razmak između teksta i granice */
+    white-space: nowrap; /* Sprječava prelazak teksta u novi red */
+    line-height: 1.5; /* Postavlja liniju na visinu*/
+}
+
