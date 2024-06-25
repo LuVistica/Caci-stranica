@@ -15,8 +15,12 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Harmonia+Sans&display=swap">
 
-                
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
+
+                
     <link rel="stylesheet" href="css/shared/header.css"/>
     <link rel="stylesheet" href="css/shared/general.css">
     <link rel="stylesheet" href="css/shared/footer.css"/>
@@ -58,19 +62,17 @@
                 <button>Reviews</button>
             </div>
             <div class="image-gallery">
-                <div class="main-image">
-                    <img src="main-image.jpg" alt="Main property image">
-                </div>
                 <div class="side-images">
-                    <img src="slike/7.jpg" alt="Image 1">
-                    <img src="slike/24.jpg" alt="Image 2" class="large-image">
-                    <img src="slike/13.jpg" alt="Image 3">
-                    <img src="slike/25.jpg" alt="Image 4">
-                    <img src="slike/12.jpg" alt="Image 5">
-                    <img src="slike/9.jpg" alt="Image 6">
-                    <img src="slike/10.jpg" alt="Image 7">
-                    <img src="slike/15.jpg" alt="Image 8">
+                    <a href="slike/7.jpg" data-fancybox="gallery"><img src="slike/7.jpg" alt="Image 1"></a>
+                    <a href="slike/24.jpg" data-fancybox="gallery"><img src="slike/24.jpg" alt="Image 2" class="large-image"></a>
+                    <a href="slike/13.jpg" data-fancybox="gallery"><img src="slike/13.jpg" alt="Image 3"></a>
+                    <a href="slike/25.jpg" data-fancybox="gallery"><img src="slike/25.jpg" alt="Image 4"></a>
+                    <a href="slike/12.jpg" data-fancybox="gallery"><img src="slike/12.jpg" alt="Image 5"></a>
+                    <a href="slike/9.jpg" data-fancybox="gallery"><img src="slike/9.jpg" alt="Image 6"></a>
+                    <a href="slike/10.jpg" data-fancybox="gallery"><img src="slike/10.jpg" alt="Image 7"></a>
+                    <a href="slike/15.jpg" data-fancybox="gallery"><img src="slike/15.jpg" alt="Image 8"></a>
                 </div>
+                
             </div>
             <div class="amenities">
                 <div class="amenity">
@@ -105,26 +107,7 @@
 
 
         <div class="content">
-            <div class="image-gallery">
-                <div class="main-image">
-                    <img src="main-image.jpg" alt="Main Image">
-                </div>
-                <div class="thumbnail-images">
-                    <img src="thumb1.jpg" alt="Thumbnail 1">
-                    <img src="thumb2.jpg" alt="Thumbnail 2">
-                    <img src="thumb3.jpg" alt="Thumbnail 3">
-                    <img src="thumb4.jpg" alt="Thumbnail 4">
-                    <img src="thumb5.jpg" alt="Thumbnail 5">
-                </div>
-            </div>
-            <div class="icons">
-                <div class="icon"><img src="vacation-home.png" alt="Vacation home"><span>Vacation home</span></div>
-                <div class="icon"><img src="pool-heated.png" alt="Pool heated (32 m²)"><span>Pool heated (32 m²)</span></div>
-                <div class="icon"><img src="area-size.png" alt="Area size 1200 m²"><span>Area size 1200 m²</span></div>
-                <div class="icon"><img src="2-persons.png" alt="2 persons"><span>2 persons</span></div>
-                <div class="icon"><img src="parking.png" alt="Parking"><span>Parking</span></div>
-                <div class="icon"><img src="internet.png" alt="Internet"><span>Internet</span></div>
-            </div>
+           
             <div class="details">
                 <div class="section about-property">
                     <h3>ABOUT THE PROPERTY</h3>
@@ -201,5 +184,26 @@
         </div>
     </footer>
 
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('[data-fancybox="gallery"]').fancybox({
+                buttons: [
+                    "slideShow",
+                    "thumbs",
+                    "zoom",
+                    "fullScreen",
+                    "share",
+                    "close"
+                ],
+                loop: true,
+                protect: true
+            });
+        });
+    </script>
+    
 </body>
 </html>
