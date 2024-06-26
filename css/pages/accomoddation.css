@@ -5,19 +5,27 @@
 }
 
 
-.buttons{
-    margin-bottom: 30px;
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
+
 .buttons button {
-    margin-right: 20px;
-    padding: 15px;
-    background-color: white;
-    border-radius: 8px;
-    border: 2px solid #c7c5c5;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
-.buttons button:hover{
-    border: 2px solid black;
+
+.buttons button:hover {
+    background-color: #0056b3;
 }
+
 
 .content {
     width: 70%;
@@ -196,9 +204,6 @@ details-grid {
     border-radius: 10px;
 }
 
-#calendar {
-    width: 100%;
-}
 
 .fc .fc-toolbar-title {
     font-size: 18px;
@@ -225,9 +230,24 @@ details-grid {
     margin: 20px 0;
 }
 
-#map {
-    height: 300px;
-    width: 80%;
+#calendar {
+    width: 100%;
     max-width: 600px;
+    margin: 0 auto 50px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    transform-origin: top left; 
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
