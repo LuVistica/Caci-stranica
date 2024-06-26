@@ -38,9 +38,9 @@
     <main>
         <div class="container">
             <div class="buttons">
-                <button onclick="scrollToSection('.section-property')">Property details</button>
-                <button onclick="scrollToSection('.section-check')">Amenities, price and availability</button>
-                <button onclick="scrollToSection('.about-unit')">Location on map</button>
+                <button onclick="scrollToSection('.section-property')" style="background-color: white;">Property details</button>
+                <button onclick="scrollToSection('.section2')">Amenities and availability</button>
+                <button onclick="scrollToSection('#map')">Location on map</button>
             </div>
             <div class="image-gallery">
                 <div class="side-images">
@@ -96,11 +96,11 @@
                     </p>
                 </div>
                 <div class="section-check" style="background-color: white;">
-                    <h3>CHECK IN / CHECK OUT</h3>
+                    <h3 style="padding-right: 0px;">CHECK IN / CHECK OUT</h3>
                     <p>from <strong>16:00</strong> h<br>to <strong>10:00</strong> h</p>
                 </div>
                 <div class="section2" style="background-color: white;">
-                    <h3>OBJECT AMENITIES</h3>
+                    <h3 style="padding-right: 45px;">OBJECT AMENITIES</h3>
                     <div class="amenities2">
                         <div class="amenity2"><img src="ikone/globe.png" alt="Internet"><span>Internet</span></div>
                         <div class="amenity2"><img src="ikone/car.png" alt="Parking"><span>Covered Parking</span></div>
@@ -118,8 +118,25 @@
                         <div class="amenity2"><img src="ikone/table-football.png" alt="Parking"><span>Table Football</span></div>
                     </div>
                 </div>
-                <div class="section3" style="background-color: white;">
-                    <h3>INCLUDED IN THE PRICE</h3>
+                <div class="section2">
+                    <h3 style="padding-right: 60px;">ABOUT THE UNIT</h3>
+                    <p>The romantic little house in an oasis of peace. Plan your romantic getaway to Istria! Visit Villa Romantica, an ideal 
+                        vacation destination for two in idyllic Istria. Our little house offers the perfect combination of luxury, comfort, and 
+                        privacy so that you can fully enjoy your vacation together. 
+                        <br/>
+                        <br/>
+                        Located in an oasis of peace, Villa Romantica offers an 
+                        unforgettable experience, surrounded by the untouched nature of Istria. Villa Romantica is equipped with various amenities 
+                        to make your stay as pleasant as possible. Free Wi-Fi, fully equipped kitchen, sauna, and jacuzzi are just some of the 
+                        facilities that will complete your vacation experience for two. 
+                        <br/>
+                        <br/>
+                        Whether you and your partner are looking for a weekend
+                         break or a longer vacation, Villa Romantica will provide you with the perfect environment to renew your relationship and
+                          create unique moments. Book your stay today and start planning your romantic adventure at Villa Romantica.</p>
+                </div>
+                <div class="section-check" style="background-color: white;">
+                    <h3 style="padding-right: 0px;">UNIT DETAILS</h3>
                     <ul>
                         <li>Sojourn tax</li>
                         <li>Final cleaning</li>
@@ -131,22 +148,31 @@
                         <li>Parking space</li>
                     </ul>
                 </div>
-                <div class="section4" style="background-color: white;">
-                    <h3>AVAILABILITY CALENDAR</h3>
+                <div class="section2" style="background-color: white;height: 570px;">
+                    <h3 style="padding-right: 0px;">AVAILABILITY </h3>
                     <div id="calendar"></div>
                 </div>
-                <div class="about-unit">
-                    <h3>ABOUT THE UNIT</h3>
-                    <p>The romantic little house in an oasis of peace. Plan your romantic getaway to Istria! Visit Villa Romantica, an ideal vacation destination for two in idyllic Istria. Our little house offers the perfect combination of luxury, comfort, and privacy so that you can fully enjoy your vacation together. Located in an oasis of peace, Villa Romantica offers an unforgettable experience, surrounded by the untouched nature of Istria. Villa Romantica is equipped with various amenities to make your stay as pleasant as possible. Free Wi-Fi, fully equipped kitchen, sauna, and jacuzzi are just some of the facilities that will complete your vacation experience for two. Whether you and your partner are looking for a weekend break or a longer vacation, Villa Romantica will provide you with the perfect environment to renew your relationship and create unique moments. Book your stay today and start planning your romantic adventure at Villa Romantica.</p>
-                    <div id="map"></div>
-                </div>
+                <div id="map"></div>
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2023 Villa Dalmatina. All rights reserved.</p>
+        <div class="footer-column">
+            <h3 style="margin-bottom: 20px;">Villa Dalmatina</h3>
+            <p>Sreser, Kraj-Rat 38A, Pelješac</p>
+            <p>+385 91 529 2643</p>
+            <p>villadalmatina@gmail.com</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="villadalmatina.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="accomoddation.html">Accomoddation</a></li>
+                <li><a href="pricelist.html">Price List</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
         </div>
     </footer>
 
@@ -157,6 +183,29 @@
 
 
     <script>
+        function scrollToSection(selector) {
+    const targetSection = document.querySelector(selector);
+
+    if (targetSection) {
+        // Dobivanje visine prozora
+        const windowHeight = window.innerHeight;
+
+        // Dobivanje visine ciljnog elementa
+        const sectionHeight = targetSection.clientHeight;
+
+        // Izračunavanje željene pozicije scrollanja kako bi ciljani element bio centriran
+        const scrollPosition = targetSection.offsetTop - (windowHeight - sectionHeight) / 2;
+
+        // Scrollanje do ciljnog elementa s glatkom animacijom
+        window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
+
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 

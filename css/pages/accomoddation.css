@@ -6,25 +6,41 @@
 
 
 .buttons {
-    display: flex;
-    justify-content: center;
+    margin-top: 10px;
     gap: 10px;
     margin-bottom: 20px;
 }
 
 .buttons button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+    color: black;
+    margin-right: 10px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    border: none;
+    background-color: white;
+    position: relative; /* Za pozicioniranje pseudo-elementa */
 }
 
-.buttons button:hover {
-    background-color: #0056b3;
+.buttons button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgb(226, 226, 226); /* Prozirni obrub koji neće utjecati na veličinu */
+    border-radius: 5px;
+    pointer-events: none; /* Osigurava da pseudo-element ne ometa klikove */
 }
+
+.buttons button:hover::before {
+    border-color: black; /* Postavljanje boje obruba prilikom hover-a */
+}
+
+
+
 
 
 .content {
@@ -155,7 +171,7 @@ details-grid {
     width: 180px;
     font-size: 14px;
     font-weight: bold;
-    margin-right: 20px; /* Razmak desno od naslova */
+     /* Razmak desno od naslova */
     border-right: 3px solid #989696; /* Desni border */
     padding-right: 20px; /* Razmak između teksta i granice */
     white-space: nowrap; /* Sprječava prelazak teksta u novi red */
@@ -163,6 +179,7 @@ details-grid {
 }
 .section2 p, .section-property p, .section-check p {
     font-size: 12px;
+    padding-left: 20px;
 }
 
 
@@ -172,7 +189,8 @@ details-grid {
     align-items: center;
     text-align: center; /* Centrira tekst */
     font-size: 14px;
-    height: 50px;
+    height: 30px;
+    margin-top: 10px;
 }
 .amenity2 img{
     width: 25px;
@@ -189,6 +207,7 @@ details-grid {
     flex-wrap: wrap;
     gap: 30px;
     height: 50px;
+    padding-left: 20px;
 }
 
 
@@ -229,6 +248,10 @@ details-grid {
     width: 100%;
     margin: 20px 0;
 }
+.fc-dayGridDay {
+    font-size: 12px; /* Prilagodi veličinu fonta unutar dana */
+    padding: 0px; /* Dodaj prostor unutar ćelije */
+}
 
 #calendar {
     width: 100%;
@@ -236,15 +259,15 @@ details-grid {
     margin: 0 auto 50px;
     background: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 35px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     
 }
 
 #map {
-    height: 500px;
+    height: 600px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto 50px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
