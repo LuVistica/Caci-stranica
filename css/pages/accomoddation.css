@@ -210,6 +210,34 @@ details-grid {
     padding-left: 20px;
 }
 
+.ul-ikone{
+    list-style-type: none;
+    padding: 20px;
+    margin: 0px;
+}
+.unit-ikone{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.unit-ikone img{
+    width: 20px;
+}
+
+.section-check h4 {
+    width: 180px;
+    font-size: 14px;
+    font-weight: bold;
+     /* Razmak desno od naslova */
+    padding-left: 20px;
+    white-space: nowrap; /* Sprječava prelazak teksta u novi red */
+    line-height: 1.5; /* Postavlja liniju na visinu*/
+    margin-bottom: 0px;
+}
+
+
+
 
 
 .calendar-container {
@@ -261,6 +289,7 @@ details-grid {
     border-radius: 10px;
     padding: 35px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid rgb(139, 139, 139);
     
 }
 
