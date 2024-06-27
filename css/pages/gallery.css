@@ -1,0 +1,87 @@
+.home-slika{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height:600px;
+    margin-top: 100px;
+}
+.home-slika img{
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+.full-width-div {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(30, 28, 28); /* Možeš promeniti boju po potrebi */
+    color: white;
+    margin-top: -8px;
+    margin-bottom: 30px;
+}
+.full-width-div h2, .full-width-div p {
+    margin: 0; /* Uklanja margine */
+}
+.full-width-div h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.full-width-div p {
+    max-width: 600px; /* Ograničava širinu paragrafa */
+   
+}
+
+
+.image-gallery{
+    width:1150px;
+    margin:0 auto;
+}
+.image-gallery h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+
+.side-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.side-images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.side-images img:hover {
+    transform: scale(1.1); /* Zoom in efekt na hover */
+}
+
+/* Postavljamo visinu za slike 2, 3 i 6 */
+.side-images .img2,
+.side-images .img3,
+.side-images .img6 {
+    height: 200px; /* Postavljamo visinu na 300 piksela ili drugu željenu vrijednost */
+}
+
+/* Zaobljenje slika */
+.side-images img {
+    border-radius: 10px;
+}
+
+.side-images a img:hover {
+    transform: scale(1.1); /* Zoom in efekt na hover */
+}
