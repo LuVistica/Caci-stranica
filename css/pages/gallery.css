@@ -42,6 +42,7 @@
 .image-gallery{
     width:1150px;
     margin:0 auto;
+    margin-bottom: 50px;
 }
 .image-gallery h3{
     text-align: center;
