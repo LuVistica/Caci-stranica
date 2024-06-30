@@ -76,29 +76,57 @@ header {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
-    header {
-        height: 80px;
-        padding-left: 20px;
-        padding-right: 10px;
-    }
+@media (max-width: 991px) {
+    
+    
+.naslov {
+    margin-left: 20px;
+}
 
+.logo {
+    width: 120px;
+    height: 60px;
+}
+
+.lista {
+    width: 550px;
+    font-size: 14px;
+}
+    
+}
+
+@media (max-width: 767px) {
+    
+    
+    .naslov {
+        margin-left: 10px;
+    }
+    
     .logo {
         width: 120px;
         height: 60px;
     }
-
+    
     .lista {
-        width: auto;
-        font-size: 14px;
+        width: 450px;
+        font-size: 12px;
     }
-
     .lista ul li {
-        padding-right: 20px;
+        padding-right: 30px;
     }
+        
 }
 
-@media (max-width: 600px) {
+
+
+
+@media (max-width: 575px) {
+
+    header {
+        padding-left: 230px;
+        padding-right: 50px;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -108,7 +136,7 @@ header {
         right: -100%;
         top: 0;
         height: 100vh;
-        width: 60%;
+        width: 100%;
         background-color: rgb(30, 28, 28);
         flex-direction: column;
         align-items: center;

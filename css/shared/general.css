@@ -11,13 +11,11 @@ main {
    
 }
 
-@media (max-width: 1024px) {
-    main {
-        margin-top: 80px;
-    }
+@media (max-width: 991px) {
+    
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
     main {
         margin-top: 60px;
     }
