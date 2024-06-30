@@ -44,13 +44,14 @@ footer {
 }
 
 
-@media (max-width: 991px) {
- 
-}
 
 @media (max-width: 575px) {
+
     footer {
         padding: 20px 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer-column {
@@ -59,6 +60,9 @@ footer {
 
     .footer-column h3 {
         font-size: 20px;
+    }
+    .footer-column ul li {
+        text-align: center;
     }
 
     .footer-column p, .footer-column a {
