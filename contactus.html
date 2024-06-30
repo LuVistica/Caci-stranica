@@ -33,10 +33,16 @@
 <body>
 
     <header>
-       
-        <div class="naslov"><a href="index.html"><img class="logo" src="slike/1.png" /></a></div>
-        
+        <div class="naslov">
+            <a href="index.html"><img class="logo" src="slike/1.png" /></a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="lista">
+            <div class="close-menu">&times;</div>
             <ul>
                 <li><a class="header-link" href="index.html">Home</a></li>
                 <li><a class="header-link" href="accomoddation.html">Accomoddation</a></li>
@@ -45,8 +51,6 @@
                 <li><a class="header-link" href="contactus.html">Contact Us</a></li>
             </ul>
         </div>
-
-
     </header>
 
 
@@ -104,5 +108,26 @@
         </div>
     </footer>
     
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const closeMenu = document.querySelector('.close-menu');
+    const lista = document.querySelector('.lista');
+
+    hamburger.addEventListener('click', () => {
+        lista.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        lista.classList.remove('active');
+    });
+});
+
+
+
+
+</script>
 </body>
 </html>
