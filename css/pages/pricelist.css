@@ -1,3 +1,18 @@
+body{
+    font-family: "Lora", "LatoWebBold", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    
+}
+main {
+    margin-top: 50px;
+   
+}
+
+
+
 .full-width-div {
     width: 100%;
     height: 120px;
@@ -45,7 +60,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #419bfc; /* Možeš promeniti boju po potrebi */
+    background-color: #64abf8; /* Možeš promeniti boju po potrebi */
     color: white;
     margin-top: 100px;
     margin-bottom: 30px;
@@ -56,6 +71,7 @@ table {
     width: 40%;
     margin: 0 auto; /* Centriranje tablice */
     border-collapse: collapse;
+    margin-bottom: 50px;
 }
 
 th, td {
@@ -75,3 +91,85 @@ th {
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+
+
+.full-width-div-2 {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d6d5d5; /* Možeš promeniti boju po potrebi */
+    color: black;
+
+}
+ .full-width-div-2 p {
+    margin: 0; /* Uklanja margine */
+    max-width: 600px; 
+    text-align: center;
+    font-size: 12px;
+}
+.btn{
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #64abf8;
+    background-color: #64abf8;
+    color: white;
+    font-size: 14px;
+}
+
+
+
+.section {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0eded;/* Dodana tamna pozadina */
+    border-radius: 10px; /* Zaobljene ivice */
+    color: black;
+    margin: 50px auto;
+    overflow: hidden; /* Obezbeđuje da unutrašnji sadržaj ne prelazi granice roditeljskog elementa */
+    
+}
+
+.section .text {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+
+.section .image {
+    flex: 1;
+    text-align: right;
+    margin: 0; /* Uklanja margine */
+    padding: 0;
+    height: 100%; /* Obezbeđuje da roditeljski element zauzme svu visinu */
+}
+
+.section .image img {
+    width: 100%;
+    height: auto; /* Sprečava da slika bude izobličena */
+    object-fit: cover; /* Održava proporcije slike i pokriva ceo prostor */
+    border-radius: 20px; /* Zaobljene ivice slike koje odgovaraju roditeljskom elementu */
+    display: block; /* Uklanja dodatni prostor ispod slike */
+}
+
+.section .text h2 {
+    margin-bottom: 20px;
+    color: black;
+    font-size: 18px;
+}
+.section .text p{
+    font-size: 14px;
+}
+
+ul li{
+    font-size: 14px;
+}
+
