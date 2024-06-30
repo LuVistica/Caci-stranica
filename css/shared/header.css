@@ -123,8 +123,7 @@ header {
 @media (max-width: 575px) {
 
     header {
-        padding-left: 230px;
-        padding-right: 50px;
+       
     }
 
     .hamburger {
