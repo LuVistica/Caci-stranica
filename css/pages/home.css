@@ -158,17 +158,18 @@
         margin-top: 100px;
     }
     .home-slika{
-        height: 400px;
+        height: 350px;
     }
 
     .mobile-image{
-        height: 400px;
+        height: 350px;
     }
     .text-overlay{
         font-size: 16px;
+        padding: 5px;
     }
     .text-overlay p{
-        margin: 10px;
+        margin: 5px;
     }
     .txt-border{
         padding-bottom: 15px;
