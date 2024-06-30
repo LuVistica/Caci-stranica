@@ -45,7 +45,7 @@
     color: black;
     margin: 50px auto;
     overflow: hidden; /* Obezbeđuje da unutrašnji sadržaj ne prelazi granice roditeljskog elementa */
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.4);
+    
 }
 
 .section .text {
@@ -102,4 +102,77 @@
 .full-width-div p {
     max-width: 600px; /* Ograničava širinu paragrafa */
    
+}
+
+
+@media (max-width: 1024px) {
+    .home-slika {
+        height: 600px;
+    }
+
+    .home-slika img {
+        height: 600px;
+    }
+
+    .text-overlay {
+        font-size: 30px;
+    }
+
+    .section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .section .text, .section .image {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .full-width-div {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .full-width-div h2 {
+        font-size: 24px;
+    }
+
+    .full-width-div p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-slika {
+        height: 400px;
+    }
+
+    .home-slika img {
+        height: 400px;
+    }
+
+    .text-overlay {
+        font-size: 20px;
+    }
+
+    .section {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .section .text {
+        padding: 10px;
+    }
+
+    .section .image img {
+        border-radius: 10px;
+    }
+
+    .full-width-div h2 {
+        font-size: 20px;
+    }
+
+    .full-width-div p {
+        font-size: 12px;
+    }
 }

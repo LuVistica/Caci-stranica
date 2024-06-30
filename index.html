@@ -33,9 +33,9 @@
 <body>
 
     <header>
-       
-        <div class="naslov"><a href="index.html"><img class="logo" src="slike/1.png" /></a></div>
-        
+        <div class="naslov">
+            <a href="index.html"><img class="logo" src="slike/1.png" /></a>
+        </div>
         <div class="lista">
             <ul>
                 <li><a class="header-link" href="index.html">Home</a></li>
@@ -45,9 +45,18 @@
                 <li><a class="header-link" href="contactus.html">Contact Us</a></li>
             </ul>
         </div>
-
-
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+    
+    
+    
+    
+    
+    
 
 <main>
   <div class="home-slika">
@@ -211,6 +220,24 @@
     </footer>
 
 
-<script type="module" src="skripte/villa.js"></script>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const lista = document.querySelector('.lista');
+
+    hamburger.addEventListener('click', () => {
+        lista.classList.toggle('active');
+    });
+});
+
+
+
+
+
+
+
+
+</script>
 </body>
 </html>

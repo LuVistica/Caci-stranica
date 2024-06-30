@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     background-color: rgb(30, 28, 28);
     color: white;
@@ -8,32 +8,32 @@ header{
     padding-left: 40px;
     padding-right: 20px;
     position: fixed;
-    top:0;
+    top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
 }
 
-.naslov{
+.naslov {
     margin-left: 30px;
 }
-.logo{
-    width:140px;
-    height:80px;
+
+.logo {
+    width: 140px;
+    height: 80px;
 }
 
-
-
-.lista{
+.lista {
     width: 600px;
     font-size: 16px;
 }
+
 .lista ul {
-    list-style-type:none;
+    list-style-type: none;
     padding-left: 0px;
 }
 
-.lista ul li{
+.lista ul li {
     display: inline-block;
     padding-right: 40px;
     font-weight: bold;
@@ -42,8 +42,8 @@ header{
 .header-link {
     text-decoration: none;
     color: white;
-    position: relative; /* Potrebno za pseudo-element */
-    padding-bottom: 10px; /* Prostor ispod teksta za animaciju bordera */
+    position: relative;
+    padding-bottom: 10px;
 }
 
 .header-link::after {
@@ -54,9 +54,80 @@ header{
     width: 0%;
     height: 1px;
     background-color: white;
-    transition: width 0.5s; /* Tranzicija širine za 0.5 sekundi */
+    transition: width 0.5s;
 }
 
 .header-link:hover::after {
     width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    header {
+        height: 80px;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 60px;
+    }
+
+    .lista {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .lista ul li {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .lista {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 60%;
+        background-color: rgb(30, 28, 28);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .lista ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .lista ul li {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .lista.active {
+        right: 0;
+    }
 }
