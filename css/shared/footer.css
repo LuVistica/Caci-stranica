@@ -48,10 +48,11 @@ footer {
 @media (max-width: 575px) {
 
     footer {
-        padding: 20px 10px;
+        padding: 10px 10px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 400px;
     }
 
     .footer-column {
