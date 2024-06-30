@@ -122,8 +122,8 @@ header {
 
 @media (max-width: 575px) {
 
-    header {
-       
+    .naslov {
+       margin: 0 auto;
     }
 
     .hamburger {
