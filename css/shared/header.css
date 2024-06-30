@@ -1,3 +1,4 @@
+
 header {
     display: flex;
     background-color: rgb(30, 28, 28);
@@ -15,8 +16,7 @@ header {
 }
 
 .naslov {
-    flex: 1;
-    text-align: center;
+    margin-left: 30px;
 }
 
 .logo {
@@ -24,49 +24,20 @@ header {
     height: 80px;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin-bottom: 4px;
-    border-radius: 5px;
-}
-
 .lista {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(30, 28, 28);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 999;
-}
-
-.lista.active {
-    right: 0;
+    width: 600px;
+    font-size: 16px;
 }
 
 .lista ul {
     list-style-type: none;
-    padding-left: 0;
-    margin-top: 30px;
+    padding-left: 0px;
 }
 
 .lista ul li {
-    padding: 20px 0;
-    text-align: center;
-    font-size: 16px;
+    display: inline-block;
+    padding-right: 40px;
+    font-weight: bold;
 }
 
 .header-link {
@@ -91,47 +62,22 @@ header {
     width: 100%;
 }
 
-.close-menu {
-    
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
+.hamburger {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
 }
 
-/* Media Queries */
-@media (max-width: 575px) {
-    .naslov {
-        margin: 0 auto;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .lista {
-        right: -100%;
-    }
-
-    .lista.active {
-        right: 0;
-    }
-
-  
-
-    .lista.active ~ .close-menu {
-        display: block;
-    }
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin-bottom: 4px;
+    border-radius: 5px;
 }
-
-
-
-
-
-
-
+.close-menu{
+    display: none;
+}
 
 /* Media Queries */
 @media (max-width: 991px) {
@@ -170,7 +116,7 @@ header {
         font-size: 12px;
     }
     .lista ul li {
-        padding-right: 30px;
+        padding-right: 20px;
     }
         
 }
@@ -178,3 +124,51 @@ header {
 
 
 
+@media (max-width: 575px) {
+
+    .naslov {
+       margin: 0 auto;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .lista {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 90vh;
+        width: 100%;
+        background-color: rgb(30, 28, 28);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .lista ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .lista ul li {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .lista.active {
+        right: 0;
+    }
+
+    .close-menu{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        top: 30px;
+        right: 30px;
+        font-size: 30px;
+        padding-right: 40px;
+    }
+}
