@@ -564,17 +564,14 @@
 
     .ul-ikone {
         padding: 10px;
-        font-size: 8px;
+        display: inline-block;
     }
 
     #media-check{
         display: inline;
         
     }
-   /*#div-ikona{
-        width: 150px;
-        margin-right: 190px;
-    } */
+  
      #div-ikona{
         display:inline-flex;
         flex-direction: column;
@@ -591,14 +588,19 @@
         padding-left: 0;
     }
 
-    #unit-details{
+   /* #unit-details{
         flex-direction: row;
         justify-content: flex-start;
     }
+
     
     #unit-details ul{
         padding-right: 5px;
         height: 100%;
+    }*/
+
+    #unit-details{
+        display: inline;
     }
 
     .calendar-container {
