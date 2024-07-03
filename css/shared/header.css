@@ -129,9 +129,7 @@ header {
 
 @media (max-width: 575px) {
 
-    header{
-        width: 85%;
-    }
+   
 
     .naslov {
        margin: 0 auto;
