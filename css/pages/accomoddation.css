@@ -438,7 +438,7 @@
 /* Pravila za male ekrane */
 @media (max-width: 575px) {
     .container {
-        width: 100%;
+        
         padding: 10px;
     }
     
