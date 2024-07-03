@@ -466,7 +466,7 @@
 
     .side-images {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
 
@@ -521,6 +521,7 @@
         font-size: 12px;
         margin-top:30px;
         margin-bottom: 30px;
+        height: 350px;
     }
 
     .section2 h3, .section-property h3, .section-check h3 {
