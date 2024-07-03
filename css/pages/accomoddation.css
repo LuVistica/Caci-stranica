@@ -571,7 +571,7 @@
         
     }
     #div-ikona{
-        width: 165px;
+        width: 150px;
         margin-right: 190px;
     }
 
@@ -600,7 +600,9 @@
     #calendar {
         width: 80%;
         padding: 20px;
+        height: 380px;
     }
+    
 
     #map {
         height: 400px;
