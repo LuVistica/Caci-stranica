@@ -514,6 +514,7 @@
     .section2, .section-property, .section-check {
         flex-direction: column;
         padding: 15px;
+        padding-bottom: 30px;
         font-size: 12px;
     }
 
@@ -553,6 +554,14 @@
     .ul-ikone {
         padding: 10px;
         font-size: 9px;
+    }
+
+    #media-check{
+        flex-direction: column;
+        
+    }
+    #div-ikona{
+        width: 165px;
     }
 
     
