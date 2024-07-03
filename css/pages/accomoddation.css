@@ -142,12 +142,7 @@
     font-size: 14px;
 }
 
-details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 80%;
-    margin-top: 20px;
-}
+
 
 .detail {
   height: 30px;
@@ -301,5 +296,294 @@ details-grid {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 0;
+}
+
+@media (max-width: 1199px){
+    .content{
+        width: 90%;
+    }
+    .amenities{
+        flex-wrap: nowrap;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .container{
+        width: 100%;
+    }
+    .image-gallery{
+        width: 100%;
+    }
+    
+    .section2, .section-property, .section-check {
+        padding: 20px;
+    }
+
+    .buttons {
+        font-size: 12px;
+    }
+    .side-images{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .amenities {
+        flex-wrap: nowrap;
+    }
+    .amenity img {
+        width: 30px;
+    }
+    .content{
+        width: 100%;
+    }
+    #media-check h3{
+        width: 180px;
+        
+    }
+    #div-ikona{
+        width: 180px;
+    }
+    
+    #nediaheckin{
+        display: flex;
+        
+    }
+    #nediaheckin h3{
+        border-right: 3px solid #989696;
+        width: 200px;
+        width: 180px;
+        font-size: 14px;
+    }
+    #nediaheckin p{
+        padding-left: 20px;
+    }
+    #map{
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    body,main{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+
+    .side-images{
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .amenities {
+        flex-wrap: wrap;
+    }
+    .amenity{
+        height: 50px;
+    }
+    .section2, .section-property, .section-check {
+        flex-direction: column;
+        height: 300px;
+        padding: 30px;
+    }
+    .section2 h3, .section-property h3, .section-check h3{
+        border-right: none;
+        border-bottom: 3px solid #989696;
+        padding-bottom: 10px;
+    }
+    .amenity2 img{
+        width: 20px;
+    }
+    .section-check {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    #media-check{
+        justify-content: flex-start;
+
+    }
+    
+    .div-ikona{
+        margin-top: 40px;
+        margin-left: -200px;
+        margin-right: 200px;
+    }
+    #nediaheckin{
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 200px;
+    }
+    #nediaheckin h3{
+        border-bottom: 3px solid #989696;
+        border-right: none;
+        width: 200px;
+        padding-bottom: 10px;
+    }
+
+    #calendar {
+       height: 450px;
+       padding: 20px;
+       margin: 0 auto;
+       margin-top: 20px;
+    }
+    #map{
+        height: 500px;
+        width: 90%;
+    }
+    
+}
+
+/* Ostala CSS pravila ostaju ista */
+
+/* Pravila za male ekrane */
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .buttons button {
+        margin: 0;
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .side-images {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .side-images img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .section {
+        margin-bottom: 15px;
+    }
+
+    .section h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+        padding-left: 8px;
+    }
+
+    .section p {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .amenities{
+        flex-wrap: nowrap;
+        gap:35px;
+        margin-bottom: 50px;
+    }
+
+    .amenity {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .amenity img {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    .details {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .section2, .section-property, .section-check {
+        flex-direction: column;
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .section2 h3, .section-property h3, .section-check h3 {
+        width: 80%;
+        border-right: none;
+        border-bottom: 3px solid #989696;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .section2 p, .section-property p, .section-check p {
+        padding-left: 0;
+       
+    }
+
+    .amenity2 {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .amenity2 img {
+        width: 20px;
+        padding-right: 0;
+    }
+
+    .amenity2 span {
+        font-size: 12px;
+    }
+
+    .amenities2 {
+        gap: 20px;
+        
+    }
+
+    .ul-ikone {
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    
+
+    .section-check h4 {
+        font-size: 12px;
+        padding-left: 0;
+    }
+
+    #unit-details{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    #unit-details ul{
+        padding-right: 5px;
+    }
+
+    .calendar-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #calendar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #map {
+        height: 400px;
+        width: 100%;
+        padding: 0 10px;
+    }
 }
 

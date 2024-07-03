@@ -86,19 +86,19 @@ header {
 @media (max-width: 991px) {
     
     
-.naslov {
-    margin-left: 20px;
-}
+    .naslov {
+        margin-left: 20px;
+    }
 
-.logo {
-    width: 120px;
-    height: 60px;
-}
+    .logo {
+        width: 120px;
+        height: 60px;
+    }
 
-.lista {
-    width: 550px;
-    font-size: 14px;
-}
+    .lista {
+        width: 550px;
+        font-size: 14px;
+    }
     
 }
 
@@ -128,6 +128,10 @@ header {
 
 
 @media (max-width: 575px) {
+
+    header{
+        width: 85%;
+    }
 
     .naslov {
        margin: 0 auto;

@@ -12,11 +12,20 @@ main {
 }
 
 @media (max-width: 991px) {
-    
+    main,body{
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    main,body{
+        width: 100%;
+    }
 }
 
 @media (max-width: 575px) {
-    main {
-        margin-top: 60px;
+    main,body {
+        
+        width: 100%;
     }
 }
