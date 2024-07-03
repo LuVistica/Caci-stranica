@@ -3,12 +3,16 @@ body{
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    box-sizing: border-box;
     
+    width: 100%;
 }
+* {
+    box-sizing: border-box;
+}
+
 main {
     margin-top: 100px;
-   
+    width: 100%;
 }
 
 @media (max-width: 991px) {
