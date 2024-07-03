@@ -568,13 +568,21 @@
     }
 
     #media-check{
-        flex-direction: column;
+        display: inline;
         
     }
-    #div-ikona{
+   /*#div-ikona{
         width: 150px;
         margin-right: 190px;
-    }
+    } */
+     #div-ikona{
+        display:inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        
+     }
 
     
 
