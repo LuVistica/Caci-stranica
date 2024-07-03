@@ -492,13 +492,16 @@
 
     .amenities{
         flex-wrap: nowrap;
-        gap:35px;
+        gap:20px;
         margin-bottom: 50px;
     }
 
     .amenity {
         width: 100%;
         font-size: 12px;
+    }
+    .amenity p{
+        font-size: 10px;
     }
 
     .amenity img {
@@ -516,6 +519,8 @@
         padding: 15px;
         padding-bottom: 30px;
         font-size: 12px;
+        margin-top:30px;
+        margin-bottom: 30px;
     }
 
     .section2 h3, .section-property h3, .section-check h3 {
@@ -528,7 +533,7 @@
 
     .section2 p, .section-property p, .section-check p {
         padding-left: 0;
-       
+        font-size: 10px;
     }
 
     .amenity2 {
