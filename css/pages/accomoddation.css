@@ -530,6 +530,7 @@
         border-bottom: 3px solid #989696;
         padding-bottom: 10px;
         margin-bottom: 10px;
+        height: 40px;
     }
 
     .section2 p, .section-property p, .section-check p {
@@ -588,6 +589,7 @@
     
     #unit-details ul{
         padding-right: 5px;
+        height: 100%;
     }
 
     .calendar-container {
