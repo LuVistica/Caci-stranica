@@ -24,8 +24,5 @@ main {
 }
 
 @media (max-width: 575px) {
-    main,body {
-        
-        width: 100%;
-    }
+   
 }
