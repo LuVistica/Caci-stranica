@@ -157,7 +157,7 @@
 .section2,.section-property,.section-check{
     display: flex;
     background-color: #f0eded;
-    height:200px;
+    height:300px;
     padding: 30px;
     border-radius: 10px;
 }
@@ -173,7 +173,7 @@
     line-height: 1.5; /* Postavlja liniju na visinu*/
 }
 .section2 p, .section-property p, .section-check p {
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 20px;
 }
 
@@ -280,6 +280,7 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto 50px;
+    margin-top: 30px;
     background: white;
     border-radius: 10px;
     padding: 35px;
@@ -293,6 +294,7 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto 50px;
+    margin-top: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 0;
@@ -376,18 +378,24 @@
     .amenities {
         flex-wrap: wrap;
     }
+    .amenities2{
+        gap: 20px;
+    }
     .amenity{
         height: 50px;
     }
     .section2, .section-property, .section-check {
         flex-direction: column;
-        height: 300px;
+        height: 350px;
         padding: 30px;
     }
     .section2 h3, .section-property h3, .section-check h3{
         border-right: none;
         border-bottom: 3px solid #989696;
         padding-bottom: 10px;
+    }
+    .section2 p, .section-property p, .section-check p {
+        font-size: 12px;
     }
     .amenity2 img{
         width: 20px;
@@ -396,16 +404,31 @@
         flex-wrap: wrap;
         justify-content: flex-end;
     }
-    #media-check{
-        justify-content: flex-start;
-
+    .ul-ikone {
+        display: inline-block;
     }
+
+    #media-check{
+        display: inline;
+        
+    }
+  
+     #div-ikona{
+        display:inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        
+     }
     
-    .div-ikona{
+    /*.div-ikona{
         margin-top: 40px;
         margin-left: -200px;
         margin-right: 200px;
-    }
+    }*/
+
+
     #nediaheckin{
         margin-left: 10px;
         display: flex;
@@ -444,11 +467,9 @@
     
     .buttons {
         display: flex;
-        flex-direction: column;
-        align-items: stretch;
         margin-top: 10px;
         gap: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .buttons button {
@@ -456,7 +477,7 @@
         margin-bottom: 10px;
         padding: 8px;
         font-size: 12px;
-        border: 1px solid black;
+        border: 1px solid rgb(113, 112, 112);
     }
     
     .content {

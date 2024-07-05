@@ -26,7 +26,6 @@ footer {
     list-style-type: none;
     padding: 0;
     margin: 0; /* Dodano da ukloni defaultni margin od ul */
-    text-align: left;
 }
 
 .footer-column ul li {
