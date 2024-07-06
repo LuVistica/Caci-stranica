@@ -66,3 +66,12 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+
+@media (max-width: 575px) {
+
+    .contact-form-wrapper{
+        width: 90%;
+    }
+
+}
