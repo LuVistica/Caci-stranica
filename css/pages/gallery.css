@@ -179,11 +179,11 @@
         font-size: 17px;
     }
     .full-width-div h3::before {
-        left: -70%;
+        left: -80%;
     }
     
     .full-width-div h3::after {
-        right: -70%;
+        right: -80%;
     }
     
 
