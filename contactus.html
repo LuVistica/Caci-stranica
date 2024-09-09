@@ -57,7 +57,7 @@
     <div class="contact-form-wrapper">
         <h2>Contact Us</h2>
         <div class="contact-form-container">
-            <form action="https://formspree.io/f/mdknaybe" method="POST">
+            <form action="https://formspree.io/f/mdknaybe" method="POST" id="contactForm">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="Name" required>
@@ -78,16 +78,32 @@
                     <label for="departure-date">Departure Date:</label>
                     <input type="date" id="departure-date" name="Departure-date" required>
                 </div>
+    
+                <!-- Adults Dropdown -->
+                <div class="form-group">
+                    <label for="adults">Adults (max 12):</label>
+                    <select id="adults" name="Adults" required>
+                        <!-- Options will be populated by JS -->
+                    </select>
+                </div>
+    
+                <!-- Children Dropdown -->
+                <div class="form-group">
+                    <label for="children">Children (max 5):</label>
+                    <select id="children" name="Children" required>
+                        <!-- Options will be populated by JS -->
+                    </select>
+                </div>
+    
                 <div class="form-group">
                     <label for="message">Message:</label>
                     <textarea id="message" name="Message" rows="5" required></textarea>
                 </div>
+                <p id="error-message" style="color:red; display:none;">The total number of adults and children cannot exceed 12.</p>
                 <button type="submit">Send Message</button>
             </form>
-
         </div>
     </div>
-
 
     <footer>
         <div class="footer-column">
@@ -124,6 +140,70 @@ document.addEventListener('DOMContentLoaded', () => {
         lista.classList.remove('active');
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const adultsSelect = document.getElementById('adults');
+    const childrenSelect = document.getElementById('children');
+    const maxTotal = 12;
+
+    function populateOptions(selectElement, max, selectedValue) {
+        selectElement.innerHTML = ''; // Clear existing options
+        for (let i = 0; i <= max; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            selectElement.appendChild(option);
+        }
+        // Re-select the previous value (if it exists within the new options)
+        if (selectedValue !== null && selectedValue <= max) {
+            selectElement.value = selectedValue;
+        }
+    }
+
+    function updateOptions() {
+        const adults = parseInt(adultsSelect.value) || 0;
+        const children = parseInt(childrenSelect.value) || 0;
+        const total = adults + children;
+        
+        // Store the currently selected values
+        const selectedAdults = adultsSelect.value;
+        const selectedChildren = childrenSelect.value;
+
+        // Disable options in both dropdowns if they exceed the remaining allowance
+        const remainingAdults = Math.min(maxTotal - children, 12);
+        const remainingChildren = Math.min(maxTotal - adults, 5);
+
+        // Repopulate the dropdowns with the previous selections preserved
+        populateOptions(adultsSelect, remainingAdults, selectedAdults);
+        populateOptions(childrenSelect, remainingChildren, selectedChildren);
+    }
+
+    // Initialize both dropdowns
+    populateOptions(adultsSelect, 12, null);
+    populateOptions(childrenSelect, 5, null);
+
+    // Event listeners to update the options dynamically
+    adultsSelect.addEventListener('change', updateOptions);
+    childrenSelect.addEventListener('change', updateOptions);
+
+    // Form validation on submit
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        const adults = parseInt(adultsSelect.value) || 0;
+        const children = parseInt(childrenSelect.value) || 0;
+        const total = adults + children;
+
+        if (total > maxTotal) {
+            document.getElementById('error-message').style.display = 'block';
+            event.preventDefault(); // Stop form submission
+        } else {
+            document.getElementById('error-message').style.display = 'none';
+        }
+    });
+});
+
 
 
 
