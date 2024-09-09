@@ -638,10 +638,19 @@
         height: 380px;
     }
 
-    .fc .fc-toolbar-title {
-        font-size: 14px;
-    }
     
+
+    /* Prilagodba gumbova desno od h2 */
+    .fc-toolbar button {
+        font-size: 10px !important; /* Smanji veličinu fonta gumbova */
+        padding: 3px !important; /* Prilagodi padding za gumbe */
+    }
+
+    /* Prilagodba za bolji raspored gumba i naslova h2 */
+    .fc-toolbar-title {
+        font-size: 14px !important; /* Smanji veličinu naslova */
+    }
+
 
     #map {
         height: 400px;
