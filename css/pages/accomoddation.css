@@ -35,7 +35,9 @@
     pointer-events: none; /* Osigurava da pseudo-element ne ometa klikove */
 }
 
-
+.buttons button:hover::before {
+    border-color: black; /* Postavljanje boje obruba prilikom hover-a */
+}
 
 
 
