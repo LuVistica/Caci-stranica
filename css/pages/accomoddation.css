@@ -31,7 +31,7 @@
     right: 0;
     bottom: 0;
     border: 1px solid rgb(226, 226, 226); /* Prozirni obrub koji neće utjecati na veličinu */
-    border-radius: 5px;
+    border-radius: 13px;
     pointer-events: none; /* Osigurava da pseudo-element ne ometa klikove */
 }
 
