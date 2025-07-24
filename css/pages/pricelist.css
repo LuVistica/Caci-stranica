@@ -6,10 +6,7 @@ body{
     box-sizing: border-box;
     
 }
-main {
-    margin-top: 50px;
-   
-}
+
 
 
 
@@ -168,10 +165,94 @@ tr:nth-child(even) {
 .section .text p{
     font-size: 14px;
 }
-
-ul li{
+.section .text ul li{
     font-size: 14px;
 }
+
+
+
+
+
+
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+
+.fc-toolbar-title {
+    font-size: 25px !important; 
+    font-weight: bold;
+}
+
+.fc button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 4px 4px !important;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fc button:hover {
+    background-color: #0056b3;
+}
+
+#map-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+#calendar {
+    height: auto !important;
+    overflow: hidden !important;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    margin-top: 30px;
+    background: white;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid rgb(139, 139, 139);
+    
+}
+
+
+
+
+/* Spriječi scrollanje unutar kalendara */
+.fc .fc-scroller-liquid-absolute,
+.fc .fc-scroller-harness,
+.fc .fc-scroller {
+  overflow-y: hidden !important;
+  max-height: none !important;
+}
+.fc .fc-col-header { 
+    margin: 0 !important; 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1199px){
 
@@ -215,6 +296,14 @@ ul li{
         padding-top: 15px;
     }
 
+
+     #calendar {
+       height: 450px;
+       padding: 20px;
+       margin: 0 auto;
+       margin-top: 20px;
+    }
+
 }
 
 @media(max-width:575px){
@@ -239,6 +328,33 @@ ul li{
         margin: 0px auto;
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+
+
+
+
+     .calendar-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #calendar {
+        width: 90%;
+        padding: 20px;
+        height: 380px;
+    }
+
+
+
+     /* Prilagodba gumbova desno od h2 */
+    .fc-toolbar button {
+        font-size: 10px !important; /* Smanji veličinu fonta gumbova */
+        padding: 3px !important; /* Prilagodi padding za gumbe */
+    }
+
+    /* Prilagodba za bolji raspored gumba i naslova h2 */
+    .fc-toolbar-title {
+        font-size: 14px !important; /* Smanji veličinu naslova */
     }
 }
 

@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villa Dalmatina</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/selima" rel="stylesheet">
-
-
-
-    <link rel="icon" href="slike/logo.png" type="image/png">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Harmonia+Sans&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-    
+    <link rel="icon" href="slike/logo.png" type="image/png">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Harmonia+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/shared/general.css"/>
     <link rel="stylesheet" href="css/shared/header.css"/>
     <link rel="stylesheet" href="css/shared/footer.css"/>
     <link rel="stylesheet" href="css/pages/pricelist.css">
+
+
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' />
     
 
         <!-- Meta Pixel Code -->
@@ -64,18 +70,27 @@
                 <li><a class="header-link" href="index">Home</a></li>
                 <li><a class="header-link" href="accomoddation">Accomoddation</a></li>
                 <li><a class="header-link" href="gallery">Gallery</a></li>
-                <li><a class="header-link" href="pricelist">Price List</a></li>
+                <li><a class="header-link" href="pricelist">Calendar & Price</a></li>
                 <li><a class="header-link" href="contactus">Contact Us</a></li>
             </ul>
         </div>
     </header>
 
 
-    <div class="full-width-div">
-        <h3>PRICE LIST</h3>
-        
-    </div>
+   
     <main>
+
+        <div class="full-width-div" >
+        <h3>CALENDAR</h3>
+
+        </div>
+
+
+        <div id="calendar" translate="no"></div>
+
+        <div class="full-width-div">
+        <h3>PRICE LIST</h3>
+        </div>
 
         <table>
             <thead>
@@ -214,7 +229,7 @@
                 <p><strong>Other:</strong></p>
                 <ul>
                     <li><strong>A security deposit</strong> of €500 is required. (deposit will be returned to the guest’s account a few days after departure, once the 
-                        villa has been cleaned and checked for any damage.)</li>
+                        villa has been cleaned and checked for any damage.) </li>
                     <li>Final cleaning €200.</li>
                     <li>Smoking is not allowed inside the house. Smoking outside the house is permitted.</li>
                     
@@ -255,8 +270,514 @@
     
 
 
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+
 
 <script>
+
+
+ function scrollToSection(selector) {
+    const targetSection = document.querySelector(selector);
+
+    if (targetSection) {
+        // Dobivanje visine prozora
+        const windowHeight = window.innerHeight;
+
+        // Dobivanje visine ciljnog elementa
+        const sectionHeight = targetSection.clientHeight;
+
+        // Izračunavanje željene pozicije scrollanja kako bi ciljani element bio centriran
+        const scrollPosition = targetSection.offsetTop - (windowHeight - sectionHeight) / 2;
+
+        // Scrollanje do ciljnog elementa s glatkom animacijom
+        window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    // Definiraj datume koji će biti unaprijed označeni
+    var preselectedDates = [
+        '2024-06-01',
+        '2024-06-02',
+        '2024-06-03',
+        '2024-06-04',
+        '2024-06-05',
+        '2024-06-06',
+        '2024-06-07',
+        '2024-06-08',
+        '2024-06-09',
+        '2024-06-10',
+        '2024-06-11',
+        '2024-06-12',
+        '2024-06-13',
+        '2024-06-14',
+        '2024-06-15',
+        '2024-06-16',
+        '2024-06-17',
+        '2024-06-18',
+        '2024-06-19',
+        '2024-06-20',
+        '2024-06-21',
+        '2024-06-22',
+        '2024-06-23',
+        '2024-06-24',
+        '2024-06-25',
+        '2024-06-26',
+        '2024-06-27',
+        '2024-06-28',
+        '2024-06-29',
+        '2024-06-30',
+
+        '2024-07-01',
+        '2024-07-02',
+        '2024-07-03',
+        '2024-07-04',
+        '2024-07-05',
+        '2024-07-06',
+        '2024-07-07',
+        '2024-07-08',
+        '2024-07-09',
+        '2024-07-10',
+        '2024-07-11',
+        '2024-07-12',
+        '2024-07-13',
+        '2024-07-14',
+        '2024-07-15',
+        '2024-07-16',
+        '2024-07-17',
+        '2024-07-18',
+        '2024-07-19',
+        '2024-07-20',
+        '2024-07-21',
+        '2024-07-22',
+        '2024-07-23',
+        '2024-07-24',
+        '2024-07-25',
+        '2024-07-26',
+        '2024-07-27',
+        '2024-07-28',
+        '2024-07-29',
+        '2024-07-30',
+        '2024-07-31',
+        
+        '2024-08-01',
+        '2024-08-02',
+        '2024-08-03',
+        '2024-08-04',
+        '2024-08-05',
+        '2024-08-06',
+        '2024-08-07',
+        '2024-08-08',
+        '2024-08-09',
+        '2024-08-10',
+        '2024-08-11',
+        '2024-08-12',
+        '2024-08-13',
+        '2024-08-14',
+        '2024-08-15',
+        '2024-08-16',
+        '2024-08-17',
+        '2024-08-18',
+        '2024-08-19',
+        '2024-08-20',
+        '2024-08-21',
+        '2024-08-22',
+        '2024-08-23',
+        '2024-08-24',
+        '2024-08-25',
+        '2024-08-26',
+        '2024-08-27',
+        '2024-08-28',
+        '2024-08-29',
+        '2024-08-30',
+        '2024-08-31',
+
+        '2024-09-01',
+        '2024-09-02',
+        '2024-09-03',
+        '2024-09-04',
+        '2024-09-05',
+        '2024-09-06',
+        '2024-09-07',
+        '2024-09-08',
+        '2024-09-09',
+        '2024-09-10',
+        '2024-09-11',
+        '2024-09-12',
+        '2024-09-13',
+        '2024-09-14',
+        '2024-09-15',
+        '2024-09-16',
+        '2024-09-17',
+        '2024-09-18',
+        '2024-09-19',
+        '2024-09-20',
+        '2024-09-21',
+        '2024-09-22',
+        '2024-09-23',
+        '2024-09-24',
+        '2024-09-25',
+        '2024-09-26',
+        '2024-09-27',
+        '2024-09-28',
+        '2024-09-29',
+        '2024-09-30',
+        '2024-09-31',
+
+        '2024-10-01',
+        '2024-10-02',
+        '2024-10-03',
+        '2024-10-04',
+
+        '2024-10-20',
+        '2024-10-21',
+        '2024-10-22',
+        '2024-10-23',
+        '2024-10-24',
+        '2024-10-25',
+        '2024-10-26',
+
+/*2025----------------------------------------------------------*/
+
+        '2025-04-18',
+        '2025-04-19',
+        '2025-04-20',
+        '2025-04-21',
+        '2025-04-22',
+        '2025-04-23',
+        '2025-04-24',
+        '2025-04-25',
+        
+
+
+        '2025-04-30',
+        '2025-05-01',
+        '2025-05-02',
+       
+
+
+        '2025-05-17',
+        '2025-05-18',
+        '2025-05-19',
+        '2025-05-20',
+        '2025-05-21',
+        '2025-05-22',
+        '2025-05-23',
+        '2025-05-24',
+        '2025-05-25',
+        '2025-05-26',
+        '2025-05-27',
+        '2025-05-28',
+        '2025-05-29',
+        '2025-05-30',
+        '2025-05-31',
+
+
+
+        '2025-06-01',
+        '2025-06-02',
+        '2025-06-03',
+        '2025-06-04',
+        '2025-06-05',
+        '2025-06-06',
+        '2025-06-07',
+        '2025-06-08',
+        '2025-06-09',
+        '2025-06-10',
+        '2025-06-11',
+        '2025-06-12',
+        '2025-06-13',
+        '2025-06-14',
+        '2025-06-15',
+        '2025-06-16',
+        '2025-06-17',
+        '2025-06-18',
+        '2025-06-19',
+        '2025-06-20',
+        '2025-06-21',
+        '2025-06-22',
+        '2025-06-23',
+        '2025-06-24',
+        '2025-06-25',
+        '2025-06-26',
+        '2025-06-27',
+        '2025-06-28',
+        '2025-06-29',
+        '2025-06-30',
+
+
+        '2025-07-01',
+        '2025-07-02',
+        '2025-07-03',
+        '2025-07-04',
+        '2025-07-05',
+        '2025-07-06',
+        '2025-07-07',
+        '2025-07-08',
+        '2025-07-09',
+        '2025-07-10',
+        '2025-07-11',
+        '2025-07-12',
+        '2025-07-13',
+        '2025-07-14',
+        '2025-07-15',
+        '2025-07-16',
+        '2025-07-17',
+        '2025-07-18',
+        '2025-07-19',
+        '2025-07-20',
+        '2025-07-21',
+        '2025-07-22',
+        '2025-07-23',
+        '2025-07-24',
+        '2025-07-25',
+        '2025-07-26',
+        '2025-07-27',
+        '2025-07-28',
+        '2025-07-29',
+        '2025-07-30',
+        '2025-07-31',
+        
+
+        '2025-08-01',
+        '2025-08-02',
+        '2025-08-03',
+        '2025-08-04',
+        '2025-08-05',
+        '2025-08-06',
+        '2025-08-07',
+        '2025-08-08',
+        '2025-08-09',
+        '2025-08-10',
+        '2025-08-11',
+        '2025-08-12',
+        '2025-08-13',
+        '2025-08-14',
+        '2025-08-15',
+        '2025-08-16',
+        '2025-08-17',
+        '2025-08-18',
+        '2025-08-19',
+        '2025-08-20',
+        '2025-08-21',
+        '2025-08-22',
+        '2025-08-23',
+        '2025-08-24',
+        '2025-08-25',
+        '2025-08-26',
+        '2025-08-27',
+        '2025-08-28',
+        '2025-08-29',
+        '2025-08-30',
+        '2025-08-31',
+
+
+
+
+        '2025-09-01',
+        '2025-09-02',
+        '2025-09-03',
+        '2025-09-04',
+        '2025-09-05',
+        '2025-09-06',
+        '2025-09-07',
+        '2025-09-08',
+        '2025-09-09',
+        '2025-09-10',
+        '2025-09-11',
+        '2025-09-12',
+        '2025-09-13',
+        '2025-09-14',
+        '2025-09-15',
+        '2025-09-16',
+        '2025-09-17',
+        '2025-09-18',
+        '2025-09-19',
+       
+        '2025-09-30',
+
+        
+
+        '2025-10-01',
+        '2025-10-02',
+        '2025-10-03',
+        '2025-10-04',
+        '2025-10-05',
+        '2025-10-06',
+
+
+
+        '2025-10-11',
+        '2025-10-12',
+        '2025-10-13',
+        '2025-10-14',
+        '2025-10-15',
+        '2025-10-16',
+        '2025-10-17',
+        '2025-10-18',
+        '2025-10-19',
+        '2025-10-20',
+        '2025-10-21',
+        '2025-10-22',
+        '2025-10-23',
+        '2025-10-24',
+        '2025-10-25',
+        '2025-10-26',
+        '2025-10-27',
+        '2025-10-28',
+        '2025-10-29',
+        '2025-10-30',
+        '2025-10-31',
+
+
+
+
+
+
+    /*2026----------------------------------------------------------*/
+
+    '2026-05-30',
+    '2026-05-31',
+
+
+
+    '2026-06-01',
+    '2026-06-02',
+    '2026-06-03',
+    '2026-06-04',
+    '2026-06-05',
+    
+
+    '2026-06-20',
+    '2026-06-21',
+    '2026-06-22',
+    '2026-06-23',
+    '2026-06-24',
+    '2026-06-25',
+    '2026-06-26',
+
+
+
+    '2026-07-04',
+    '2026-07-05',
+    '2026-07-06',
+    '2026-07-07',
+    '2026-07-08',
+    '2026-07-09',
+    '2026-07-10',
+    '2026-07-11',
+    '2026-07-12',
+    '2026-07-13',
+    '2026-07-14',
+    '2026-07-15',
+    '2026-07-16',
+    '2026-07-17',
+    '2026-07-18',
+    '2026-07-19',
+    '2026-07-20',
+    '2026-07-21',
+    '2026-07-22',
+    '2026-07-23',
+    '2026-07-24',
+    '2026-07-25',
+    '2026-07-26',
+    '2026-07-27',
+    '2026-07-28',
+    '2026-07-29',
+    '2026-07-30',
+    '2026-07-31',
+    
+    '2026-08-01',
+    '2026-08-02',
+    '2026-08-03',
+    '2026-08-04',
+    '2026-08-05',
+    '2026-08-06',
+    '2026-08-07',
+    
+
+
+    '2026-08-22',
+    '2026-08-23',
+    '2026-08-24',
+    '2026-08-25',
+    '2026-08-26',
+    '2026-08-27',
+    '2026-08-28',
+    '2026-08-29',
+    '2026-08-30',
+    '2026-08-31',
+
+    '2026-09-01',
+    '2026-09-02',
+    '2026-09-03',
+    '2026-09-04',
+    '2026-09-05',
+  
+   
+
+
+
+    '2026-09-05',
+    '2026-09-06',
+    '2026-09-07',
+    '2026-09-08',
+    '2026-09-09',
+    '2026-09-10',
+    '2026-09-11',
+    '2026-09-12',
+    '2026-09-13',
+    '2026-09-14',
+    '2026-09-15',
+    '2026-09-16',
+    '2026-09-17',
+    '2026-09-18',
+    
+
+
+
+
+
+
+
+    ];
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        selectable: false, // Onemogući odabir datuma
+        showNonCurrentDates: false ,
+        fixedWeekCount: false,
+        
+        datesSet: function() {
+            preselectedDates.forEach(function(date) {
+                var dateEl = calendarEl.querySelector('[data-date="' + date + '"]');
+                if (dateEl) {
+                    dateEl.style.backgroundColor = '#ff9f89';
+                }
+            });
+        }
+    });
+    calendar.render();
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
