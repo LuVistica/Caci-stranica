@@ -231,6 +231,9 @@ tr:nth-child(even) {
 
 
 
+
+
+
 /* Spriječi scrollanje unutar kalendara */
 .fc .fc-scroller-liquid-absolute,
 .fc .fc-scroller-harness,
@@ -341,8 +344,11 @@ tr:nth-child(even) {
     #calendar {
         width: 90%;
         padding: 20px;
-        height: 370px;
+        height: 380px !important;
     }
+
+
+   
 
 
 
