@@ -360,7 +360,7 @@ tr:nth-child(even) {
 
     /* Prilagodba za bolji raspored gumba i naslova h2 */
     .fc-toolbar-title {
-        font-size: 14px !important; /* Smanji veličinu naslova */
+        font-size: 16px !important; /* Smanji veličinu naslova */
     }
 }
 
