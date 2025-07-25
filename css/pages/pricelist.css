@@ -214,7 +214,7 @@ tr:nth-child(even) {
 
 
 #calendar {
-    height: auto !important;
+    height: 545px !important;
     overflow: hidden !important;
     width: 100%;
     max-width: 600px;
