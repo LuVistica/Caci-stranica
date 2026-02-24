@@ -11,7 +11,7 @@ body{
 }
 
 main {
-    margin-top: 100px;
+    margin-top: 140px; /* === prije PROMO BAR bilo je 100px === */
     width: 100%;
 }
 
