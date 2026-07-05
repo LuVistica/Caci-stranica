@@ -9,7 +9,7 @@ header {
     padding-left: 40px;
     padding-right: 20px;
     position: fixed;
-    top: 0px; /* === za promo bara je na 42px === */
+    top: 0; /* === za promo bara je na 42px === */
     right: 0;
     left: 0;
     width: 100%;
