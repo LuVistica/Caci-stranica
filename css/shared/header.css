@@ -9,7 +9,7 @@ header {
     padding-left: 40px;
     padding-right: 20px;
     position: fixed;
-    top: 42px; /* === prije promo bara bilo je na 0 === */
+    top: 0px; /* === za promo bara je na 42px === */
     right: 0;
     left: 0;
     width: 100%;
@@ -19,7 +19,7 @@ header {
 
 
 
-/* === PROMO BAR === */
+/* === PROMO BAR === 
 .promo-bar{
     position: fixed;
     top: 0;
@@ -42,8 +42,10 @@ header {
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
-    animation: promoLoop 35s linear infinite; /* sporo */
-}
+    animation: promoLoop 35s linear infinite;
+     /* sporo */
+/*
+} 
 
 .promo-track span{
     margin-right: 120px;
@@ -65,7 +67,7 @@ header {
     0%,100% { opacity: 1; }
     50%     { opacity: 0.35; }
 }
-/* === PROMO BAR === */
+ === PROMO BAR === */
 
 
 
